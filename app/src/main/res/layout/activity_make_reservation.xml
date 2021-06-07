@@ -79,13 +79,13 @@
 
     <GridView
         android:id="@+id/gridPlaces"
-        android:layout_width="160dp"
-        android:layout_height="200dp"
+        android:layout_width="320dp"
+        android:layout_height="300dp"
         android:columnWidth="40dp"
         android:horizontalSpacing="15dp"
         android:verticalSpacing="12dp"
         android:gravity="center"
-        android:numColumns="3"
+        android:numColumns="6"
         android:stretchMode="columnWidth"
         app:layout_constraintBottom_toTopOf="@id/placesInfoTextView2"
         app:layout_constraintLeft_toLeftOf="parent"

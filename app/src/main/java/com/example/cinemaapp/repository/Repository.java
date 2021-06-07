@@ -41,7 +41,9 @@ public class Repository {
                 new Film("Bohemian Rapsody", "Drama", "The story of the legendary rock band Queen and lead singer Freddie Mercury, leading up to their famous performance at Live Aid (1985). ", 8.2, R.drawable.bohemian),
                 new Film("Aquaman", "Adventure", "Arthur Curry, the human-born heir to the underwater kingdom of Atlantis, goes on a quest to prevent a war between the worlds of ocean and land. ", 7.4, R.drawable.aquaman),
                 new Film("Untamed Romania", "Documentary", "This film is a unique production that reveals the beauty of Romania as it is, raw, magical but fragile at the same time. In the heart of Europe, there is a fabulous wildlife, rich in biodiversity, home to numerous wild animals. The endless mountain peaks and river streams, ancient forests, all provide home to various creatures. ", 8.9, R.drawable.romania),
+                new Film("Mary Queen Of Scots", "Drama", "Mary Stuart's attempt to overthrow her cousin Elizabeth I, Queen of England, finds her condemned to years of imprisonment before facing execution. ", 6.4, R.drawable.queen),
                 new Film("Mary Queen Of Scots", "Drama", "Mary Stuart's attempt to overthrow her cousin Elizabeth I, Queen of England, finds her condemned to years of imprisonment before facing execution. ", 6.4, R.drawable.queen)
+
         );
         return filmList;
     }
@@ -103,6 +105,7 @@ public class Repository {
         }
     }
 
+    //get list film and time to return a boolean list, used for booking seat
     public static HashMap<String, HashMap<Time, List<Boolean>>> getHardcodedProgram() {
         if (program == null) {
             program = new HashMap<>();
@@ -111,7 +114,7 @@ public class Repository {
                     Arrays.asList(new Time(12, 0, 0), new Time(17, 0, 0), new Time(20, 30, 0)),
                     Arrays.asList(new Time(10, 0, 0), new Time(13, 30, 0), new Time(17, 0, 0)),
                     Arrays.asList(new Time(11, 0, 0), new Time(14, 30, 0), new Time(18, 0, 0)),
-                    Arrays.asList(new Time(12, 30, 0), new Time(16, 0, 0), new Time(19, 30, 0)),
+                    Arrays.asList(new Time( 12, 30, 0), new Time(16, 0, 0), new Time(19, 30, 0)),
                     Arrays.asList(new Time(10, 0, 0), new Time(13, 30, 0), new Time(17, 0, 0))
 
             );
@@ -121,7 +124,7 @@ public class Repository {
                 i++;
                 HashMap<Time, List<Boolean>> thisFilmProgram = new HashMap<>();
                 for (Time t : thisFilmTimes) {
-                    thisFilmProgram.put(t, Arrays.asList(true, true, true, true, true, true, true, true, true));
+                    thisFilmProgram.put(t, Arrays.asList(true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true));
                 }
                 program.put(f.getTitle(), thisFilmProgram);
             }

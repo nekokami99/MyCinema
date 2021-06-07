@@ -7,6 +7,8 @@ import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -46,7 +48,9 @@ public class MakeReservationActivity extends AppCompatActivity implements MakeRe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide(); //<< this
         setContentView(R.layout.activity_make_reservation);
+
 
         //retrieve values from Intent
         Intent creatorIntent = getIntent();
@@ -62,6 +66,8 @@ public class MakeReservationActivity extends AppCompatActivity implements MakeRe
         presenter.updatePoster();
         presenter.updateTitle();
         presenter.updateStartTime();
+
+
 
         GridView gridView = (GridView)findViewById(R.id.gridPlaces);
         adapter = new GridViewAdapter(this);

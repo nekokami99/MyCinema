@@ -26,9 +26,10 @@ public class HomeFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        //create list movie
         homeActivityPresenter = new HomePresenter();
 
+        //get layout fragment_home
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
         final Fragment pointerSaver = this;
 
@@ -43,6 +44,7 @@ public class HomeFragment extends Fragment {
 
         //Add spinner
         Spinner spinner = (Spinner) view.findViewById(R.id.filter_spinner);
+        //create genres_array gain to spinner
         ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this.getContext(),
                 R.array.genres_array, android.R.layout.simple_spinner_item);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
